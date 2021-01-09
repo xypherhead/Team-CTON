@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset ="utf-8">
+    <title>Acad Page CTON</title>
+    <link rel="stylesheet" href="styles.css">        
+</head> 
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDOEg6o1AIEgKkQ4Eiq6Tc0ScLyS-PZfj4",
+    authDomain: "hack21-8b0bd.firebaseapp.com",
+    projectId: "hack21-8b0bd",
+    databaseURL: "https://hack21-8b0bd-default-rtdb.firebaseio.com",
+    storageBucket: "hack21-8b0bd.appspot.com",
+    messagingSenderId: "101881663170",
+    appId: "1:101881663170:web:791145dc59245d957bb55b"
+  };
+  // Initialize Firebase
+  console.log(firebase.initializeApp(firebaseConfig));
+  
+  var myName = prompt("Enter name");
+  
+  function sendMessage(){
+      var message = document.getElementById("message").value;
+      var datemessage = document.getElementById("datemessage").value;
+      var timemessage = document.getElementById("timemessage").value;
+      var linkmessage = document.getElementById("linkmessage").value;
+      var description = document.getElementById("description").value;
+      alert("Updated");
+      console.log(message);
+      firebase.database().ref("messages").push().set({
+          "sender" : myName ,
+          "message" : message,
+          "description":description,
+          "datemessage" : datemessage,
+          "timemessage" : timemessage,
+          "linkmessage" : linkmessage       
+      });
+      return false ;
+    }
+        firebase.database().ref("messages").on("child_added",function(snapshot){
+            var i = "" ;
+
+            i +="<li id='message-"+snapshot.key+"'>";
+
+            if(snapshot.val().sender == myName)
+            {
+              i+= "<button data-id='"+snapshot.key+"'onClick='deleteMessage(this);'>";
+              i+= "Delete" ;
+              i+="</button>";
+            }
+            i+= snapshot.val().message + "<br>"
+                +"Description : " + snapshot.val().description + "<br>" 
+                +"Date : " + snapshot.val().datemessage + "<br>"
+                +"Time : " + snapshot.val().timemessage + "<br>"
+                +"Link : " + "<a target='_blank' href='"+ snapshot.val().linkmessage + "'> Click Here! </a>"+ "<br>"
+                +"By : " + snapshot.val().sender + "<br>";
+            i += "</li>" ;
+
+            document.getElementById("messages").innerHTML += i ;
+          });
+        function deleteMessage(self){
+          var messageId = self.getAttribute("data-id");
+          firebase.database().ref("messages").child(messageId).remove();
+        }
+        firebase.database().ref("messages").on("child_removed",function(snapshot)
+        {
+          document.getElementById("message-"+snapshot.key).innerHTML = "";
+        });
+</script>
+
+<body style = " background-color:rgb(42, 38, 71);">
+  <style>
+    ul li{
+      border:3px solid black;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left:10px;
+      background-color: lemonchiffon;
+    }
+    ul{
+      list-style-type:none ;
+      margin-right: 50px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+    }
+  </style>
+
+  <div class = "dtab">
+    <form onsubmit ="return sendMessage();" >
+      <p style = "text-align: center; font-size: medium; font-size: 25px;font-weight: 750; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;color:rgb(42, 38, 71) ;">DEADLINES</p>
+      <div class = "courses"></div>
+        <div class = "select">
+          <select id="message" name="courses">
+            <option style = "font-size: 12px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">SELECT</option>
+            <option value="MAN 001" style = "font-size: 12px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif"> MAN 001:  Mathematics 1</option>          
+            <option value="PHN 001" style = "font-size: 12px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif"> PHN 001:  Mechanics</option>
+            <option value="CEN 105" style = "font-size: 12px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif"> CEN 105:  EVS</option>
+            <option value="MAN 103" style = "font-size: 12px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif"> MAN 103:  Intro To Programming</option>
+            <option value="HSN 001" style = "font-size: 12px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif"> HSN 001:  Comm. Skills</option>
+            <option value="HSN 002" style = "font-size: 12px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif"> HSN 002:  Intro To Psychology</option>
+            <option value="MAN 101" style = "font-size: 12px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif"> MAN 101:  Intro To Mathematical Sciences</option>
+            <option value="Other Notice"style = "font-size: 12px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">Other Notices</option>
+          </select>
+        </div>
+      <input type ="text" id ="description" placeholder ="Describe Event" autocomplete="off">
+      <br>
+      <input type ="date" id ="datemessage" placeholder ="DD-MM-YYYY" autocomplete="off">
+      <br>
+      <input type ="time" id ="timemessage"  autocomplete="off">
+      <br>
+      <input type ="url" id ="linkmessage" placeholder = "Link "autocomplete="off">
+      <br>
+      <input type="submit" value = "ADD EVENT">
+    </form>
+    <ul id = "messages"></ul>
+  </div>
+
+
+    <div class = "dropdown1">
+      <button class="dropbtn1">MAN 001</button>
+      <div class="dropdown1-content">
+        <a href=" https://drive.google.com/drive/folders/1NpI7Tv00iOqBTJ2Qb97UYfGJMfgWTPhd?usp=sharing" target='_blank'>Notes</a>
+        <a href="https://docs.google.com/spreadsheets/d/1BjmCLowFvA5JdHTtKlidivSGCLaV8EJe25syRnTke9U/edit#gid=0" target='_blank'>Lectures</a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=wsamyak@gmail.com" target="_blank">Click to Submit!</a>
+      </div>
+    </div>
+    <div class = "dropdown2">
+      <button class="dropbtn2">PHN 001</button>
+      <div class="dropdown2-content">
+        <a href="https://drive.google.com/drive/folders/1dgG-g5RptNg3bIGAuvUUa3B7uTbH8FDr?usp=sharing" target='_blank'>Notes</a>
+        <a href="https://docs.google.com/spreadsheets/d/1BjmCLowFvA5JdHTtKlidivSGCLaV8EJe25syRnTke9U/edit#gid=0" target='_blank'>Lectures</a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=wsamyak@gmail.com" target="_blank">Click to Submit!</a>
+      </div>
+    </div>
+    <div class = "dropdown3">
+      <button class="dropbtn3">MAN 101</button>
+      <div class="dropdown3-content">
+        <a href="https://drive.google.com/drive/folders/1IS6e3oRWIgMiSJGJdn5wVoQYODwWCGpb?usp=sharing" target='_blank'>Notes</a>
+        <a href="https://docs.google.com/spreadsheets/d/1BjmCLowFvA5JdHTtKlidivSGCLaV8EJe25syRnTke9U/edit#gid=0" target='_blank'>Lectures</a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=wsamyak@gmail.com" target="_blank">Click to Submit!</a>
+      </div>
+    </div>
+    <div class = "dropdown4">
+      <button class="dropbtn4">MAN 103</button>
+      <div class="dropdown4-content">
+        <a href="https://drive.google.com/drive/folders/1bv68sHSk-MBGY39sOz3orbDHAGIloibm?usp=sharing" target='_blank'>Notes</a>
+        <a href="https://docs.google.com/spreadsheets/d/1BjmCLowFvA5JdHTtKlidivSGCLaV8EJe25syRnTke9U/edit#gid=0" target='_blank'>Lectures</a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=wsamyak@gmail.com" target="_blank">Click to Submit!</a>
+      </div>
+    </div>
+    <div class = "dropdown5">
+      <button class="dropbtn5">CEN 105</button>
+      <div class="dropdown5-content">
+        <a href="https://drive.google.com/drive/folders/1mTIQ4KUYhe2EpOulE2jH4Yr4fP9DuUog?usp=sharing" target='_blank'>Notes</a>
+        <a href="https://docs.google.com/spreadsheets/d/1BjmCLowFvA5JdHTtKlidivSGCLaV8EJe25syRnTke9U/edit#gid=0" target='_blank'>Lectures</a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=wsamyak@gmail.com" target="_blank">Click to Submit!</a>
+      </div>
+    </div>
+    <div class = "dropdown6">
+      <button class="dropbtn6">HSN 002</button>
+      <div class="dropdown6-content">
+        <a href="https://drive.google.com/drive/folders/1bMO14mOYCIXvJet4rM5J-43MaoJ5ZTW-?usp=sharing" target='_blank'>Notes</a>
+        <a href="https://docs.google.com/spreadsheets/d/1BjmCLowFvA5JdHTtKlidivSGCLaV8EJe25syRnTke9U/edit#gid=0" target='_blank'>Lectures</a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=wsamyak@gmail.com" target="_blank">Click to Submit!</a>
+      </div>
+    </div>
+    <div class = "dropdown7">
+      <button class="dropbtn7">HSN 001</button>
+      <div class="dropdown7-content">
+        <a href="https://drive.google.com/drive/folders/1ctVyKPVoDzrtYZRUChtNyMvupLjFtH_R?usp=sharing" target='_blank'>Notes</a>
+        <a href="https://docs.google.com/spreadsheets/d/1BjmCLowFvA5JdHTtKlidivSGCLaV8EJe25syRnTke9U/edit#gid=0" target='_blank'>Lectures</a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=wsamyak@gmail.com" target="_blank">Click to Submit!</a>
+      </div>
+    </div>
+    <div class = "dropdown8">
+      <button class="dropbtn8" >Others </button>
+    </div>
+    <div class = "img">
+      <img src = "3.jpg" width = 300px height="300px">
+    </div>
+
+    <div class = "ppage">
+      <a href="./file.html">
+        <input type="submit" value="Personal page"/>
+       </a>
+  </div>
+
+
+</body>
+</html>

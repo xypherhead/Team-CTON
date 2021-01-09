@@ -1,0 +1,479 @@
+div.dtab {
+    background-color:#f67e78;
+    background-size: cover;
+    border: 5px groove #000000;
+    padding : 10px;
+    position: relative;
+    float:right;
+    overflow:scroll;
+    width : 20%; 
+    height:700px;
+}
+.dropbtn1 {
+    background-color: #843b62;
+    border-radius: 5px;
+    border: 5px inset black;
+    color: white;
+    padding-left: 37px;
+    padding-right: 37px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+.dropbtn2 {
+    background-color: #f67e7d;
+    border: 5px inset black;
+    border-radius: 5px;
+    color: white;
+    padding-left: 37px;
+    padding-right: 37px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+.dropbtn3 {
+    background-color: #f67e7d;
+    border: 5px inset black;
+    border-radius: 5px;
+    color: white;
+    padding-left: 37px;
+    padding-right: 37px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+.dropbtn4 {
+    background-color: #ffb997;
+    border: 5px inset black;
+    border-radius: 5px;
+    color: white;
+    padding-left: 37px;
+    padding-right: 37px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+.dropbtn5 {
+    background-color: #f67e7d;
+    border: 5px inset black;
+    border-radius: 5px;
+    color: white;
+    padding-left: 37px;
+    padding-right: 37px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+.dropbtn6 {
+    background-color: #ffb997;
+    border: 5px inset black;
+    border-radius: 5px;
+    color: white;
+    padding-left: 37px;
+    padding-right: 37px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+.dropbtn7 {
+    background-color: #f67e7d;
+    border: 5px inset black;
+    border-radius: 5px;
+    color: white;
+    padding-left: 37px;
+    padding-right: 37px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+.dropbtn8 {
+    background-color: #843b62;
+    border: 5px inset black;
+    border-radius: 5px;
+    color: white;
+    padding-left: 37px;
+    padding-right: 37px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+/*MAN001*/
+.dropdown1 {
+    position: relative;
+    border: 5px inset black;
+    border-radius: 10px;
+    display: inline-block;
+    position:fixed;
+    top:5%;
+    left: 35%;  
+}
+/*PHN 001*/
+.dropdown2 {
+    position: relative;
+    border: 5px inset black;
+    border-radius: 10px;
+    display: inline-block;
+    position:fixed;
+    top:18%;
+    left:20%;  
+}
+/*MAN 101*/
+.dropdown3 {
+    position: relative;
+    border: 5px inset black;
+    border-radius: 10px;
+    display: inline-block;
+    position:fixed;
+    top:73%;
+    left: 20%;  
+}
+/*MAN 103*/
+.dropdown4 {
+    position: relative;
+    border: 5px inset black;
+    border-radius: 10px;
+    display: inline-block;
+    position:fixed;
+    top:45%;
+    left:15%;  
+}
+/*CEN 105*/
+.dropdown5 {
+    position: relative;
+    border: 5px inset black;
+    border-radius: 10px;
+    display: inline-block;
+    position:fixed;
+    top:18%;
+    left:50%;  
+}
+/*HSN 002*/
+.dropdown6 {
+    position: relative;
+    border: 5px inset black;
+    border-radius: 10px;
+    display: inline-block;
+    position:fixed;
+    top:45%;
+    left: 55%;  
+}
+/*HSN001*/
+.dropdown7 {
+    position: relative;
+    border: 5px inset black;
+    border-radius: 10px;
+    display: inline-block;
+    position:fixed;
+    top:73%;
+    left:50%;  
+}
+
+/*Others*/
+.dropdown8 {
+    position: relative;
+    border: 5px inset black;
+    border-radius: 10px;
+    display: inline-block;
+    position:fixed;
+    top:85%;
+    left:35%;  
+}  
+
+/*MAN 001*/
+.dropdown1-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown1-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+} 
+.dropdown1-content a:hover {background-color: #f1f1f1}
+.dropdown1:hover .dropdown1-content {
+    display: block;
+}  
+.dropdown1:hover .dropbtn {
+    background-color: #287dc7;
+}
+
+/*PHN*/
+
+.dropdown2-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown2-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+} 
+.dropdown2-content a:hover {background-color: #f1f1f1}
+.dropdown2:hover .dropdown2-content {
+    display: block;
+}  
+.dropdown2:hover .dropbtn {
+    background-color: #287dc7;
+}
+
+/*MAN 101*/
+
+.dropdown3-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown3-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+} 
+.dropdown3-content a:hover {background-color: #f1f1f1}
+.dropdown3:hover .dropdown3-content {
+    display: block;
+}  
+.dropdown3:hover .dropbtn {
+    background-color: #287dc7;
+}
+
+/*MAN 103*/
+
+.dropdown4-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown4-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+} 
+ 
+.dropdown4-content a:hover {background-color: #f1f1f1}
+
+.dropdown4:hover .dropdown4-content {
+    display: block;
+}
+  
+.dropdown4:hover .dropbtn {
+    background-color: #287dc7;
+}
+/*CEN 105*/
+.dropdown5-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown5-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+} 
+.dropdown5-content a:hover {background-color: #f1f1f1}
+.dropdown5:hover .dropdown5-content {
+    display: block;
+}  
+.dropdown5:hover .dropbtn {
+    background-color: #287dc7;
+}
+
+/*HSN 002*/
+.dropdown6-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}  
+.dropdown6-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+} 
+.dropdown6-content a:hover {background-color: #f1f1f1}
+.dropdown6:hover .dropdown6-content {
+    display: block;
+}  
+.dropdown6:hover .dropbtn {
+    background-color: #287dc7;
+}
+
+/*HSN 001*/
+.dropdown7-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown7-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+.dropdown7-content a:hover {background-color: #f1f1f1}
+.dropdown7:hover .dropdown7-content {
+    display: block;
+}  
+.dropdown7:hover .dropbtn {
+    background-color: #287dc7;
+}
+/*Others*/
+.dropdown8-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown8-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+.dropdown8-content a:hover {background-color: #f1f1f1}
+.dropdown8:hover .dropdown8-content {
+    display: block;
+}  
+.dropdown8:hover .dropbtn {
+    background-color: #287dc7;
+}
+
+div.img{
+    position:fixed;
+    top:30%;
+    left: 30%;
+
+}
+
+div.courses {
+    text-align: left;
+    padding-left: 5px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+}
+select {
+    margin-left: 2px;
+    margin-left:25px;
+    margin-bottom: 2px;
+    width: 77%;
+    padding: 5px 5px;
+    border: 5px inset rgb(42, 38, 71);
+    border-radius: 4px;
+    background-color: #ffffff;
+}
+input[type=text]{
+    width:70%;
+    margin: 4px;
+    margin-left:25px;    
+    padding: 5px 5px;
+    border: 5px inset rgb(42, 38, 71);
+    border-radius: 4px;
+    font-style: normal;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+}
+input[type=date]{
+    margin: 4px;
+    margin-left:25px;
+    width:70%;
+    padding: 5px 5px;
+    border: 5px inset rgb(42, 38, 71);
+    border-radius: 4px;
+    font-size: 12px;
+    font-style: normal;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif";
+}
+input[type=time]{
+    margin: 4px;
+    margin-left:25px;
+    width:70%;
+    padding: 5px 5px;
+    border: 5px inset rgb(42, 38, 71);
+    border-radius: 4px;
+    font-size: 12px;
+    font-style: normal;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif";
+}
+input[type=url]{
+    width:70%;
+    margin: 4px;
+    margin-left:25px;
+    padding: 5px 5px;
+    border: 5px inset rgb(42, 38, 71);
+    border-radius: 4px;
+    font-size: 12px;
+    font-style: normal;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+}
+input[type=submit]{
+    margin-left: 100px;
+    text-align:center;
+    color:rgb(0, 0, 0);
+    border: 2px solid rgb(42, 38, 71);
+    border-radius: 4px;
+    font-style: normal;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+}
+div.ppage{
+    position:fixed;
+    top:90%;
+    padding:0px;
+    padding-right:10px;
+    text-align: center;
+    font-weight: 500;
+    font-style: normal;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+}
+

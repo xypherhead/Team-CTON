@@ -1,0 +1,139 @@
+div.todo {
+    background-color:#f67e78;
+    background-size: cover;
+    border: 5px groove #000000;
+    padding : 10px;
+    position: relative;
+    float:right;
+    overflow:scroll;
+    width : 75%; 
+    height:675px;
+}
+div.spotify {
+    float:left;
+
+}
+p{
+    margin:25px;
+    text-align:center;
+    font-size:25px; 
+    color:darkgrey;
+    font-style: normal;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+}
+
+.img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    z-index:-1;
+}
+iframe{
+    display:block;
+    margin: 25px;
+    margin-left: 10px;
+    width: 300px;
+    height:380px;
+    border: 5px inset rgb(228, 68, 68);
+    border-radius: 10px;
+
+}
+input[id=url]{
+    width:300px;
+    padding:5px;
+    border: 2px solid rgb(0, 255, 42);
+    border-radius: 4px;
+    color:rgb(0, 0, 0);
+    font-style: normal;
+    font-size: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+}
+input[id=url]:focus{
+    border: 2px solid rgb(0, 255, 42);
+    background-image:url(spotify.jpg);
+    background-position:10px 10px;
+    background-repeat:no-repeat;
+}
+#splay{
+    margin-left: 120px;
+    margin-top: 5px;
+    text-align:center;
+    color:rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 4px;
+    font-style: normal;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+}
+label[for=url]{
+    color:wheat;
+    margin-left:70px;
+    font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+input[type=text]{
+    width:70%;
+    margin: 4px;
+    margin-left:25px;    
+    padding: 5px 5px;
+    border: 5px inset rgb(42, 38, 71);
+    border-radius: 4px;
+    font-style: normal;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+}
+input[type=date]{
+    margin: 4px;
+    margin-left:25px;
+    width:70%;
+    padding: 5px 5px;
+    border: 5px inset rgb(42, 38, 71);
+    border-radius: 4px;
+    font-size: 12px;
+    font-style: normal;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif";
+}
+input[type=time]{
+    margin: 4px;
+    margin-left:25px;
+    width:70%;
+    padding: 5px 5px;
+    border: 5px inset rgb(42, 38, 71);
+    border-radius: 4px;
+    font-size: 12px;
+    font-style: normal;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif";
+}
+#add{
+    margin-left: 27px;
+    text-align:center;
+    color:rgb(0, 0, 0);
+    border: 5px solid rgb(42, 38, 71);
+    border-radius: 4px;
+    font-style: normal;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+}
+
+#clear{
+    margin-left: 100px;
+    text-align:center;
+    color:rgb(0, 0, 0);
+    border: 2px solid rgb(42, 38, 71);
+    border-radius: 4px;
+    font-style: normal;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+}
+
+div.apage{
+    border: 5px inset #f67e78;
+    border-radius: 5px;
+    display: inline-block;
+    position:fixed;
+    top:90%;
+    left:6%;
+    padding:10px;
+    text-align: center;
+    font-weight: 500;
+    font-style: normal;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+}
